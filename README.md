@@ -335,4 +335,4 @@ We would like to thank the [VideoAlign](https://github.com/KwaiVGI/VideoAlign) c
 
 For questions and support:
 - **Issues**: [GitHub Issues](https://github.com/MizzenAI/HPSv3/issues)
-- **Email**: xilanhua12138@sjtu.edu.cn & yhma@mizzen.ai
+- **Email**: yhshui@mizzen.ai & yhma@mizzen.ai
