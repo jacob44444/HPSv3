@@ -279,9 +279,9 @@ COHP uses multiple state-of-the-art diffusion models for initial generation: **F
 
 1. **Multi-Model Generation**: Generates images using all supported models
 2. **Reward Scoring**: Evaluates each image using the specified reward model
-3. **Best Model Selection**: Chooses the model that produced the highest-scoring image
-4. **Iterative Refinement**: Performs 5 rounds of image-to-image generation to improve quality
-5. **Adaptive Strength**: Uses strength=0.8 for rounds 1-2, then 0.5 for rounds 3-5
+3. **Best Model Selection**: Chooses the model that achieves the highest average score for its generated images
+4. **Iterative Refinement**: Performs 4 rounds of image-to-image generation to improve quality
+5. **Adaptive Strength**: Uses strength=0.8 for rounds 1-2, then 0.5 for rounds 3-4
 
 ---
 
