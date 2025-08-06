@@ -9,13 +9,6 @@
 [![Dataset](https://img.shields.io/badge/🤗-Dataset-green)](https://huggingface.co/MizzenAI/HPDv3)
 
 
-<!-- **Yuhang Ma**<sup>1,2*</sup>&ensp; **Yunhao Shui**<sup>1,3*</sup>&ensp;  **Xiaoshi Wu**<sup>4</sup>&ensp; **Keqiang Sun**<sup>1,4†</sup>&ensp; **Hongsheng Li**<sup>4,5,6†</sup>
-
-<sup>1</sup>Mizzen AI&ensp;&ensp; <sup>2</sup>King’s College London&ensp;&ensp; <sup>3</sup>Shanghai Jiaotong University&ensp;&ensp; <sup>4</sup>CUHK MMLab&ensp;&ensp; <sup>5</sup>Shanghai AI Laboratory&ensp;&ensp; <sup>6</sup>CPII, InnoHK&ensp;&ensp; 
-
-<sup>*</sup>Equal Contribution&ensp;&ensp; <sup>†</sup>Equal Advising -->
-
-
 **Yuhang Ma**<sup>1,3*</sup>&ensp; **Yunhao Shui**<sup>1,4*</sup>&ensp; **Xiaoshi Wu**<sup>2</sup>&ensp; **Keqiang Sun**<sup>1,2†</sup>&ensp; **Hongsheng Li**<sup>2,4,5†</sup>
 
 <sup>1</sup>Mizzen AI&ensp;&ensp; <sup>2</sup>CUHK MMLab&ensp;&ensp; <sup>3</sup>King’s College London&ensp;&ensp; <sup>4</sup>Shanghai Jiaotong University&ensp;&ensp; 
@@ -39,7 +32,7 @@ First, we introduce a VLM-based preference model **HPSv3**, trained on a "wide s
 
 ## ✨ Updates
 
-- **[2025-8-05]** 🎉 We release HPSv3: inference code, training code, cohp code and model weights.
+- **[2025-8-06]** 🎉 We release HPSv3: inference code, training code, cohp code and model weights.
 
 ## 📑 Table of Contents
 1. [🚀 Quick Start](#🚀-quick-start)
