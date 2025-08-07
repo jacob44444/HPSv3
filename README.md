@@ -22,7 +22,7 @@
 
 ## 📖 Introduction
 
-This is the official implementation for the paper: [HPSv3: Towards Wide-Spectrum Human Preference Score]().
+This is the official implementation for the paper: [HPSv3: Towards Wide-Spectrum Human Preference Score](https://arxiv.org/abs/2508.03789).
 First, we introduce a VLM-based preference model **HPSv3**, trained on a "wide spectrum" preference dataset **HPDv3** with 1.08M text-image pairs and 1.17M annotated pairwise comparisons, covering both state-of-the-art and earlier generative models, as well as high- and low-quality real-world images. Second, we propose a novel reasoning approach for iterative image refinement, **CoHP(Chain-of-Human-Preference)**, which efficiently improves image quality without requiring additional training data.
 
 <p align="center">
