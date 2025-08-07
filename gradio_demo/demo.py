@@ -30,7 +30,7 @@ MODEL_CONFIGS = {
     },
     "HPSv2": {
         "name": "HPSv2",
-        "checkpoint_path": "/preflab/models/HPSv2/HPS_v2_compressed.pt",
+        "checkpoint_path": "your_path_to_HPS_v2_compressed.pt",
         "type": "hpsv2"
     },
     "ImageReward": {
@@ -40,7 +40,7 @@ MODEL_CONFIGS = {
     },
     "PickScore": {
         "name": "PickScore",
-        "checkpoint_path": "/preflab/models/pickscore",
+        "checkpoint_path": "your_path_to_pickscore",
         "type": "pickscore"
     },
     "CLIP": {
@@ -363,9 +363,9 @@ with gr.Blocks(theme=gr.themes.Soft(), title="HPSv3 - Human Preference Score v3"
     <div style="text-align: center; margin-bottom: 20px;">
         <h1>🎨 HPSv3: Human Preference Score v3</h1>
         <p>Evaluate image quality and alignment with prompts with multiple models.</p>
-        <p><a href="" target="_blank">🌐 Project Website</a> | 
-            <a href="" target="_blank">📄 Paper</a> | 
-            <a href="" target="_blank">💻 Code</a></p>
+        <p><a href="https://mizzenai.github.io/HPSv3.project/" target="_blank">🌐 Project Website</a> | 
+            <a href="https://huggingface.co/papers/2508.03789" target="_blank">📄 Paper</a> | 
+            <a href="https://github.com/MizzenAI/HPSv3" target="_blank">💻 Code</a></p>
     </div>
     """)
     
