@@ -3,7 +3,7 @@
 # 🎯 HPSv3: Towards Wide-Spectrum Human Preference Score (ICCV 2025)
 
 [![Project Website](https://img.shields.io/badge/🌐-Project%20Website-deepgray)](https://mizzenai.github.io/HPSv3.project/)
-[![arXiv](https://img.shields.io/badge/arXiv-b31b1b.svg)](https://arxiv.org/abs/2508.03789)
+[![arXiv](https://img.shields.io/badge/arXiv-2508.03789-b31b1b.svg)](https://arxiv.org/abs/2508.03789)
 [![ICCV 2025](https://img.shields.io/badge/ICCV-2025-blue.svg)](https://arxiv.org/abs/2508.03789)
 [![Model](https://img.shields.io/badge/🤗-Model-yellow)](https://huggingface.co/MizzenAI/HPSv3)
 [![Dataset](https://img.shields.io/badge/🤗-Dataset-green)](https://huggingface.co/MizzenAI/HPDv3)
