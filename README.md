@@ -309,11 +309,14 @@ All experiments using the same setting and we use **Stable Diffusion 1.4** as ou
 If you find HPSv3 useful in your research, please cite our work:
 
 ```bibtex
-@inproceedings{hpsv3,
-  title={HPSv3: Towards Wide-Spectrum Human Preference Score},
-  author={Ma, Yuhang and Wu, Xiaoshi and Sun, Keqiang and Li, Hongsheng},
-  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
-  year={2025}
+@misc{ma2025hpsv3widespectrumhumanpreference,
+      title={HPSv3: Towards Wide-Spectrum Human Preference Score}, 
+      author={Yuhang Ma and Xiaoshi Wu and Keqiang Sun and Hongsheng Li},
+      year={2025},
+      eprint={2508.03789},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2508.03789}, 
 }
 ```
 
