@@ -3,13 +3,13 @@
 # 🎯 HPSv3: Towards Wide-Spectrum Human Preference Score (ICCV 2025)
 
 [![Project Website](https://img.shields.io/badge/🌐-Project%20Website-deepgray)](https://mizzenai.github.io/HPSv3.project/)
-[![arXiv](https://img.shields.io/badge/arXiv-b31b1b.svg)]()
-[![ICCV 2025](https://img.shields.io/badge/ICCV-2025-blue.svg)]()
+[![arXiv](https://img.shields.io/badge/arXiv-b31b1b.svg)](https://arxiv.org/abs/2508.03789)
+[![ICCV 2025](https://img.shields.io/badge/ICCV-2025-blue.svg)](https://arxiv.org/abs/2508.03789)
 [![Model](https://img.shields.io/badge/🤗-Model-yellow)](https://huggingface.co/MizzenAI/HPSv3)
 [![Dataset](https://img.shields.io/badge/🤗-Dataset-green)](https://huggingface.co/MizzenAI/HPDv3)
 [![PyPI](https://img.shields.io/pypi/v/hpsv3)](https://pypi.org/project/hpsv3/)
 
-**Yuhang Ma**<sup>1,3*</sup>&ensp; **Yunhao Shui**<sup>1,4*</sup>&ensp; **Xiaoshi Wu**<sup>2</sup>&ensp; **Keqiang Sun**<sup>1,2†</sup>&ensp; **Hongsheng Li**<sup>2,5,6†</sup>
+**Yuhang Ma**<sup>1,3*</sup>&ensp; **Yunhao Shui**<sup>1,4*</sup>&ensp; **Xiaoshi Wu**<sup>2</sup>&ensp; **Keqiang Sun**<sup>1,2†</sup>&ensp; **Hongsheng Li**<sup>2,4,5†</sup>
 
 <sup>1</sup>Mizzen AI&ensp;&ensp; <sup>2</sup>CUHK MMLab&ensp;&ensp; <sup>3</sup>King’s College London&ensp;&ensp; <sup>4</sup>Shanghai Jiaotong University&ensp;&ensp; 
 
