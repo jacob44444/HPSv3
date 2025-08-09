@@ -162,12 +162,35 @@ huggingface-cli download --repo-type dataset MizzenAI/HPDv3 --local-dir /your-lo
 
 ```json
 [
+    // samples from HPDv3 annotation pipeline 
     {
-        "prompt": "Description of the visual content or generation prompt",
-        "choice_dist": [12, 7],           // Preference distribution (votes for image1, image2 from annotators)
-        "confidence": 0.9999907,         // Confidence score of the preference calculated with users capability
-        "path1": "images/uuid1.jpg",     // Preferred sample
-        "path2": "images/uuid2.jpg"      // Unpreferred sample
+    "prompt": "Description of the visual content or the generation prompt.",
+    "choice_dist": [12, 7],           // Distribution of votes from annotators (12 votes for image1, 7 votes for image2)
+    "confidence": 0.9999907,         // Confidence score reflecting preference reliability, based on annotators' capabilities (independent of choice_dist)
+    "path1": "images/uuid1.jpg",     // File path to the preferred image
+    "path2": "images/uuid2.jpg",     // File path to the non-preferred image
+    "model1": "flux",                // Model used to generate the preferred image (path1)
+    "model2": "infinity"             // Model used to generate the non-preferred image (path2)
+    },
+    // samples from Midjourney
+    {
+    "prompt": "Description of the visual content or the generation prompt.",
+    "choice_dist": null,             // No distribution of votes Information from Discord
+    "confidence": null,              // No Confidence Information from Discord
+    "path1": "images/uuid1.jpg",     // File path to the preferred image.
+    "path2": "images/uuid2.jpg",     // File path to the non-preferred image.
+    "model1": "midjourney",          // Comparsion between images generated from midjourney 
+    "model2": "midjourney"           // Comparsion between images generated from midjourney 
+    },
+    // samples from Curated HPDv2
+    {
+    "prompt": "Description of the visual content or the generation prompt.",
+    "choice_dist": null,              // No distribution of votes Information from the original HPDv2 traindataset
+    "confidence": null,               // No Confidence Information from the original HPDv2 traindataset
+    "path1": "images/uuid1.jpg",     // File path to the preferred image.
+    "path2": "images/uuid2.jpg",     // File path to the non-preferred image.
+    "model1": "hpdv2",          // No specific model name in the original HPDv2 traindataset, set to hpdv2 
+    "model2": "hpdv2"           // No specific model name in the original HPDv2 traindataset, set to hpdv2 
     },
     ...
 ]
@@ -181,9 +204,12 @@ We sample part of training data from `all.json` to build training dataset `train
 ```json
 [
     {
+        "prompt": "Description of the visual content",
         "path1": "images/uuid1.jpg",     // Preferred sample
         "path2": "images/uuid2.jpg",     // Unpreferred sample
-        "prompt": "Description of the visual content"
+        "model1": "flux",                //Model used to generate the preferred sample (path1).
+        "model2": "infinity",                //Model used to generate the non-preferred sample (path2).
+
     },
     ...
 ]
