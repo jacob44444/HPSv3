@@ -6,7 +6,7 @@
 [![arXiv](https://img.shields.io/badge/arXiv-2508.03789-b31b1b.svg)](https://arxiv.org/abs/2508.03789)
 [![ICCV 2025](https://img.shields.io/badge/ICCV-2025-blue.svg)](https://arxiv.org/abs/2508.03789)
 [![Model](https://img.shields.io/badge/🤗-Model-yellow)](https://huggingface.co/MizzenAI/HPSv3)
-[![Dataset](https://img.shields.io/badge/🤗-Dataset-green)](https://huggingface.co/MizzenAI/HPDv3)
+[![Dataset](https://img.shields.io/badge/🤗-Dataset-green)](https://huggingface.co/datasets/MizzenAI/HPDv3)
 [![PyPI](https://img.shields.io/pypi/v/hpsv3)](https://pypi.org/project/hpsv3/)
 
 **Yuhang Ma**<sup>1,3*</sup>&ensp; **Yunhao Shui**<sup>1,4*</sup>&ensp; **Xiaoshi Wu**<sup>2</sup>&ensp; **Keqiang Sun**<sup>1,2†</sup>&ensp; **Hongsheng Li**<sup>2,5,6†</sup>
