@@ -192,7 +192,6 @@ huggingface-cli download --repo-type dataset MizzenAI/HPDv3 --local-dir /your-lo
     "model1": "hpdv2",          // No specific model name in the original HPDv2 traindataset, set to hpdv2 
     "model2": "hpdv2"           // No specific model name in the original HPDv2 traindataset, set to hpdv2 
     },
-    ...
 ]
 ```
 
@@ -210,8 +209,7 @@ We sample part of training data from `all.json` to build training dataset `train
         "model1": "flux",                //Model used to generate the preferred sample (path1).
         "model2": "infinity",                //Model used to generate the non-preferred sample (path2).
 
-    },
-    ...
+    }
 ]
 ```
 
