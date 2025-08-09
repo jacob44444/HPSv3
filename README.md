@@ -31,8 +31,8 @@ First, we introduce a VLM-based preference model **HPSv3**, trained on a "wide s
 
 
 ## ✨ Updates
-
-- **[2025-8-06]** 🎉 We release HPSv3: inference code, training code, cohp code and model weights. And [PyPI Package](https://pypi.org/project/hpsv3/).
+- **[2025-08-08]** 🎉 We release [HPDv3](https://huggingface.co/datasets/MizzenAI/HPDv3) dataset!.
+- **[2025-08-06]** 🎉 We release HPSv3: inference code, training code, cohp code and [HPSv3 model weights](https://huggingface.co/MizzenAI/HPSv3). And [PyPI Package](https://pypi.org/project/hpsv3/).
 
 ## 📑 Table of Contents
 1. [🚀 Quick Start](#🚀-quick-start)
@@ -103,18 +103,20 @@ python gradio_demo/demo.py
 
 The demo will be available at `http://localhost:7860` and provides:
 
-<p align="center">
+<p align="left">
   <img src="assets/gradio.png" alt="Gradio Demo" width="500"/>
 </p>
 
-## 🏋️ Training
 
-### 📁 Dataset
 
-#### Human Preference Dataset v3
+## 📁 Dataset
+
+### Human Preference Dataset v3
 
 Human Preference Dataset v3 (HPD v3) comprises 1.08M text-image pairs and 1.17M annotated pairwise data. To modeling the wide spectrum of human preference, we introduce newest state-of-the-art generative models and high quality real photographs while maintaining old models and lower quality real images.
-
+<p align="left">
+  <img src="assets/datasetvisual_0.jpg" alt="dataset" width="500"/>
+</p>
 <details close>
 <summary>Detail information of HPD v3</summary>
 
@@ -140,29 +142,54 @@ Human Preference Dataset v3 (HPD v3) comprises 1.08M text-image pairs and 1.17M 
 | Curated HPDv2 | - | 327763 | - | Train |
 </details>
 
-#### Download HPDv3
-```
+### Download HPDv3
+<!-- ```
 HPDv3 is comming soon! Stay tuned!
-```
-<!-- ```bash
-huggingface-cli download --repo-type dataset MizzenAI/HPDv3 --local-dir /your-local-dataset-path
 ``` -->
+```bash
+huggingface-cli download --repo-type dataset MizzenAI/HPDv3 --local-dir /your-local-dataset-path
+```
 
-#### Pairwise Training Data Format
+### Pairwise Training Data Format
 
 **Important Note: For simplicity, path1's image is always the prefered one**
 
+#### All Annotated Pairs (`all.json`)
+
+**Important Notes: In HPDv3, we simply put the preferred sample at the first place (path1)**
+
+`all.json` contains **all** annotated pairs except for test.
+
 ```json
 [
-  {
-    "prompt": "A beautiful landscape painting",
-    "path1": "path/to/better/image.jpg",
-    "path2": "path/to/worse/image.jpg",
-    "confidence": 0.95
-  },
-  ...
+    {
+        "prompt": "Description of the visual content or generation prompt",
+        "choice_dist": [12, 7],           // Preference distribution (votes for image1, image2 from annotators)
+        "confidence": 0.9999907,         // Confidence score of the preference calculated with users capability
+        "path1": "images/uuid1.jpg",     // Preferred sample
+        "path2": "images/uuid2.jpg"      // Unpreferred sample
+    },
+    ...
 ]
 ```
+
+#### Train set (`train.json`)
+We sample part of training data from `all.json` to build training dataset `train.json`. Moreover, to improve robustness, we integrate random sampled part of data from [Pick-a-pic](https://huggingface.co/datasets/pickapic-anonymous/pickapic_v1) and [ImageRewardDB](https://huggingface.co/datasets/zai-org/ImageRewardDB), which is `pickapic.json` and `imagereward.json`. For these two datasets, we only provide the pair infomation, and its corresponding image can be found in their official dataset repository.
+
+
+#### Test Set (`test.json`)
+```json
+[
+    {
+        "path1": "images/uuid1.jpg",     // Preferred sample
+        "path2": "images/uuid2.jpg",     // Unpreferred sample
+        "prompt": "Description of the visual content"
+    },
+    ...
+]
+```
+
+## 🏋️ Training
 
 ### 🚀 Training Command
 
@@ -244,7 +271,7 @@ To evaluate **HPSv3 preference accuracy** or **human preference score of image g
 
 COHP is our novel reasoning approach for iterative image refinement that efficiently improves image quality without requiring additional training data. It works by generating images with multiple diffusion models, selecting the best one using reward models, and then iteratively refining it through image-to-image generation.
 
-<p align="center">
+<p align="left">
   <img src="assets/cohp.png" alt="cohp" width="600"/>
 </p>
 
@@ -290,17 +317,17 @@ COHP uses multiple state-of-the-art diffusion models for initial generation: **F
 We perform [DanceGRPO](https://github.com/XueZeyue/DanceGRPO) as the reinforcement learning method. Here are some results.
 All experiments using the same setting and we use **Stable Diffusion 1.4** as our backbone.
 
-<p align="center">
+<p align="left">
   <img src="assets/rl1.jpg"  width="600"/>
 </p>
 
-<p align="center">
+<p align="left">
   <img src="assets/rl2.jpg"  width="600"/>
 </p>
 
 
 ### More Results of HPsv3 as Reward Model (Stable Diffusion 1.4)
-<p align="center">
+<p align="left">
   <img src="assets/rl_teaser.jpg" alt="cohp" width="600"/>
 </p>
 
